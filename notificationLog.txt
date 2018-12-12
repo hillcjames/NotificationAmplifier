@@ -1,57 +1,94 @@
- 5:11PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:11PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:11PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:12PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:12PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:13PM EST on Dec 11, 2018, [message]:	test2[/message]
- 5:15PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:15PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:15PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:26PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:27PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:27PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:28PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:45PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:49PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:50PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:51PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:53PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:53PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:54PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:55PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:55PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:56PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:56PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:58PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:59PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 5:59PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:00PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:00PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:00PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:00PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:00PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:00PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:01PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:01PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:01PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:01PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:02PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:02PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:02PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:03PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:05PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:05PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:09PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:09PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:09PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:10PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:10PM EST on Dec 11, 2018, [message]:	I think this works[/message]
- 6:10PM EST on Dec 11, 2018, [message]:	I think this works[/message]
+ 1:40PM EST on Dec 12, 2018, [message]notify-send:: I think this works[/message]
+ 1:40PM EST on Dec 12, 2018, [message]notify-send:: I think this works[/message]
+ 1:41PM EST on Dec 12, 2018, [message]notify-send:: I think this works[/message]
+ 1:47PM EST on Dec 12, 2018, [message]Firefox:: Matthew Brockman[/message]
+ 1:47PM EST on Dec 12, 2018, [message]Firefox:: sure that time works for me[/message]
+ 1:47PM EST on Dec 12, 2018, [message] Firefox[/message]
+ 1:47PM EST on Dec 12, 2018, [message]Firefox:: Matthew Brockman[/message]
+ 1:56PM EST on Dec 12, 2018, [message]::notify-send::::::::::::I think this works::::::::::[/message]
+ 1:57PM EST on Dec 12, 2018, [message]notify-send::I think this works::[/message]
+ 1:58PM EST on Dec 12, 2018, [message]notify-send::I think this works[/message]
+ 1:58PM EST on Dec 12, 2018, [message]notify-send::I think this works[/message]
+ 2:02PM EST on Dec 12, 2018, [message]notify-send::I think this works[/message]
+ 2:17PM EST on Dec 12, 2018, [message]Chromium::file:///tmp/.org.chromium.Chromium.KSAYJW::Web Push Book::web-push-book.gauntface.com[/message]
+ 2:17PM EST on Dec 12, 2018, [message]Chromium::file:///tmp/.org.chromium.Chromium.KSAYJW::Simple Title::web-push-book.gauntface.com[/message]
+ 2:20PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Web Push Book::web-push-book.gauntface.com::would be the body text of the notification.::can hold two lines of text.[/message]
+ 2:21PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Web Push Book::web-push-book.gauntface.com::would be the body text of the notification.::can hold two lines of text.[/message]
+ 2:21PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Ice cream dragée croissant gingerbread topping carrot cake cookie biscuit macaroon. Chocolate bonbon sweet roll pastry. Croissant cake jelly-o halvah. Tootsie roll muffin croissant bear claw.::web-push-book.gauntface.com::cheesecake sesame snaps marshmallow chocolate bar. Pie fruitcake soufflé toffee lemon drops bonbon candy. Pie cupcake icing candy marzipan chocolate. Soufflé candy canes wafer. Tiramisu sweet roll brownie gummies sweet roll icing donut cake. Gummies croissant caramels pastry gingerbread dessert brownie gingerbread. Tiramisu carrot cake jujubes pie brownie sesame snaps.[/message]
+ 2:21PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Ice cream dragée croissant gingerbread topping carrot cake cookie biscuit macaroon. Chocolate bonbon sweet roll pastry. Croissant cake jelly-o halvah. Tootsie roll muffin croissant bear claw.::web-push-book.gauntface.com::cheesecake sesame snaps marshmallow chocolate bar. Pie fruitcake soufflé toffee lemon drops bonbon candy. Pie cupcake icing candy marzipan chocolate. Soufflé candy canes wafer. Tiramisu sweet roll brownie gummies sweet roll icing donut cake. Gummies croissant caramels pastry gingerbread dessert brownie gingerbread. Tiramisu carrot cake jujubes pie brownie sesame snaps.[/message]
+ 2:24PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Actions Notification::web-push-book.gauntface.com::notification will only display 2 actions.[/message]
+ 2:24PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Actions Notification::web-push-book.gauntface.com::notification will only display 2 actions.[/message]
+ 2:24PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Notification 1 of 3::web-push-book.gauntface.com::'tag' of 'message-group-1'[/message]
+ 2:24PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Notification 2 of 3::web-push-book.gauntface.com::'tag' of 'message-group-2'[/message]
+ 2:24PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Notification 3 of 3::web-push-book.gauntface.com::'tag' of 'message-group-1'[/message]
+ 2:59PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Silent Notification::web-push-book.gauntface.com[/message]
+ 2:59PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Silent Notification::web-push-book.gauntface.com[/message]
+ 2:59PM EST on Dec 12, 2018, [message]Chromium::0::file:///tmp/.org.chromium.Chromium.KSAYJW::Silent Notification::web-push-book.gauntface.com[/message]
+ 3:00PM EST on Dec 12, 2018, [message]notify-send::
+0::
+I think this works[/message]
+ 3:01PM EST on Dec 12, 2018, [message]notify-send::
+0::
+I think this works[/message]
+ 3:01PM EST on Dec 12, 2018, [message]notify-send::
+I think this works[/message]
+ 3:01PM EST on Dec 12, 2018, [message]Chromium::
+file:///tmp/.org.chromium.Chromium.KSAYJW::
+Silent Notification::
+web-push-book.gauntface.com[/message]
+ 3:03PM EST on Dec 12, 2018, [message]notify-send::
+I think this works[/message]
+ 3:03PM EST on Dec 12, 2018, [message]Chromium::
+file:///tmp/.org.chromium.Chromium.KSAYJW::
+Silent Notification::
+web-push-book.gauntface.com[/message]
+ 3:05PM EST on Dec 12, 2018, [message]notify-send
+I think this works[/message]
+ 3:05PM EST on Dec 12, 2018, [message]notify-send
+I think this works[/message]
+ 3:05PM EST on Dec 12, 2018, [message]Chromium
+file:///tmp/.org.chromium.Chromium.KSAYJW
+Silent Notification
+web-push-book.gauntface.com[/message]
+ 3:05PM EST on Dec 12, 2018, [message]Chromium
+file:///tmp/.org.chromium.Chromium.KSAYJW
+Simple Title
+web-push-book.gauntface.com
+piece of body text.
+line of body text :)[/message]
+ 3:05PM EST on Dec 12, 2018, [message]Chromium
+file:///tmp/.org.chromium.Chromium.KSAYJW
+Ice cream dragée croissant gingerbread topping carrot cake cookie biscuit macaroon. Chocolate bonbon sweet roll pastry. Croissant cake jelly-o halvah. Tootsie roll muffin croissant bear claw.
+web-push-book.gauntface.com
+cheesecake sesame snaps marshmallow chocolate bar. Pie fruitcake soufflé toffee lemon drops bonbon candy. Pie cupcake icing candy marzipan chocolate. Soufflé candy canes wafer. Tiramisu sweet roll brownie gummies sweet roll icing donut cake. Gummies croissant caramels pastry gingerbread dessert brownie gingerbread. Tiramisu carrot cake jujubes pie brownie sesame snaps.[/message]
+ 3:06PM EST on Dec 12, 2018, [message]Chromium
+file:///tmp/.org.chromium.Chromium.KSAYJW
+Ice cream dragée croissant gingerbread topping carrot cake cookie biscuit macaroon. Chocolate bonbon sweet roll pastry. Croissant cake jelly-o halvah. Tootsie roll muffin croissant bear claw.
+web-push-book.gauntface.com
+cheesecake sesame snaps marshmallow chocolate bar. Pie fruitcake soufflé toffee lemon drops bonbon candy. Pie cupcake icing candy marzipan chocolate. Soufflé candy canes wafer. Tiramisu sweet roll brownie gummies sweet roll icing donut cake. Gummies croissant caramels pastry gingerbread dessert brownie gingerbread. Tiramisu carrot cake jujubes pie brownie sesame snaps.[/message]
+ 3:06PM EST on Dec 12, 2018, [message]notify-send
+I think this works[/message]
+ 3:06PM EST on Dec 12, 2018, [message]Chromium
+file:///tmp/.org.chromium.Chromium.KSAYJW
+Icon Notification
+web-push-book.gauntface.com[/message]
+ 3:06PM EST on Dec 12, 2018, [message]Chromium
+file:///tmp/.org.chromium.Chromium.KSAYJW
+Web Push Book
+web-push-book.gauntface.com
+would be the body text of the notification.
+can hold two lines of text.[/message]
+ 3:08PM EST on Dec 12, 2018, [message]notify-send
+I think this works[/message]
+ 3:09PM EST on Dec 12, 2018, [message]notify-send
+I think this works[/message]
+ 3:10PM EST on Dec 12, 2018, [message]Chromium
+file:///tmp/.org.chromium.Chromium.KSAYJW
+Notification 1 of 3
+web-push-book.gauntface.com
+'tag' of 'message-group-1'[/message]
+ 3:10PM EST on Dec 12, 2018, [message]Chromium
+file:///tmp/.org.chromium.Chromium.KSAYJW
+Notification 2 of 3
+web-push-book.gauntface.com
+'tag' of 'message-group-2'[/message]

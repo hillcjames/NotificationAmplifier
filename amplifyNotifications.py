@@ -13,6 +13,10 @@ import cv2
 
 def main():
 	for overheardMessage in execute(['sh', './listenForNotifySend.sh']):
+		#print("original msg: " + overheardMessage)
+		#line = time.strftime('%l:%M%p %Z on %b %d, %Y') + ":\t" + overheardMessage
+		#with open("fullLog.txt", "a") as logFile:	
+		#	logFile.write(line)
 		parseNotifySendMessage(overheardMessage)
 
 
@@ -28,18 +32,77 @@ def execute(cmd):
 
 
 
-def parseNotifySendMessage(notifySendTextLine):
-	# all lines of text will have the form `  string "message"`
-	message = notifySendTextLine.strip().split("\"")[1]
+notificationNoticed = False
+message = ""
 
-	if (message != "notify-send" and message != "urgency" 
-	    and message != "" and message[:3] != ":1."):
+'''
+notify-send sends messages that look like the below. Remember each line must be processed on its own. If it gets much more complicated
+I'll need something with CFG. pcregrep would be great, expect I can't get it to work with dbus output for some reason.
+
+method call time=1544635353.210271 sender=:1.17581 -> destination=:1.25 serial=6 path=/org/freedesktop/Notifications; interface=org.freedesktop.Notifications; member=GetServerInformation
+method call time=1544635353.222796 sender=:1.17581 -> destination=:1.25 serial=7 path=/org/freedesktop/Notifications; interface=org.freedesktop.Notifications; member=Notify
+   string "notify-send"
+   uint32 0
+   string ""
+   string "I think this works"
+   string ""
+   array [
+   ]
+   array [
+      dict entry(
+         string "urgency"
+         variant             byte 1
+      )
+   ]
+   int32 -1
+
+'''
+def parseNotifySendMessage(notifySendTextLine):
+	global notificationNoticed
+	global message
+	line = notifySendTextLine.strip()
+	words = line.split()
+	#print(line, line.split()[0])
+	if len(words) == 0:
+		return
+
+	if (words[0] == 'method'):
+		notificationNoticed = True
+		message = ""
+		#print("start of notification\n")
+		return
+
+	if (not notificationNoticed):
+		#print("not checking for notifications\n")
+		return
+
+	if (words[0] == 'array'):
+		notificationNoticed = False
+		if message[-1:] == "\n":
+			message = message[:-1]
 		logNotification(message)
 		showNotification(message)
+		#print("end of notification\n")
+		return
+
+	if (words[0][:4] == "uint"):
+		#print("not the message\n")
+		return
+
+	else: # we assume the line starts with "string", and has quotes in it.
+		payload = line.split(" ", 1)[1] #ignore the starting "string"
+		
+		for word in payload.split("\""):
+			if word != "":
+				message += word + "\n"
 	
+		return
+
+	print("you shouldn't be here - line was " + line)
+		
 
 def logNotification(msg):
-	line = time.strftime('%l:%M%p %Z on %b %d, %Y') + ", [message]:\t" + msg + "[/message]\n"
+	line = time.strftime('%l:%M%p %Z on %b %d, %Y') + ", [message]" + msg + "[/message]\n"
 
 	print(line)
 	with open("notificationLog.txt", "a") as logFile:	
@@ -54,7 +117,7 @@ def showNotification(msg):
 	toDraw = []
 	draw = ImageDraw.Draw(pilImg)
 	# or whatever font file you have on your system and would like to use.
-	font = ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationSerif-Regular.ttf", 40)
+	font = ImageFont.truetype("/usr/share/fonts/truetype/liberation2/LiberationSerif-Regular.ttf", 32)
 
 	class TextLine:
 		def __init__(self, width, yOffset, text):
@@ -66,14 +129,17 @@ def showNotification(msg):
 	yOffset = margin
 	maxCharsPerLine = 30
 	maxW = 0
-	for line in textwrap.wrap(msg, width=maxCharsPerLine):
-		wT, hT = font.getsize(line)
+	for section in msg.split("\n"):
+		for line in textwrap.wrap(section, width=maxCharsPerLine):
+			wT, hT = font.getsize(line)
 
-		toDraw.append(TextLine( wT, yOffset, line))
+			toDraw.append(TextLine( wT, yOffset, line))
 
-		yOffset += hT
-		if maxW < wT:
-			maxW = wT
+			yOffset += hT
+			if maxW < wT:
+				maxW = wT
+
+		yOffset += margin
 
 
 	if yOffset + margin > pilImg.height or maxW + 2*margin > pilImg.width:
@@ -93,8 +159,11 @@ def showNotification(msg):
 	# window name must be reliably unique, among any other window that you may have open.
 	winName = '/__Notification__/'
 
-	cv2.namedWindow(winName)
+	#https://stackoverflow.com/questions/49095446/python-opencv-remove-title-bar-toolbar-and-status-bar
 	cv2.imshow(winName, cvImg)
+	cv2.namedWindow(winName, cv2.WND_PROP_FULLSCREEN)
+	cv2.setWindowProperty(winName, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
 	activeWindowID = subprocess.check_output(["xdotool", "getactivewindow"])
 	time.sleep(0.5)	 # wait a sec 
 	cv2.waitKey(200) # wait for window to load
