@@ -14,9 +14,9 @@ import cv2
 def main():
 	for overheardMessage in execute(['sh', './listenForNotifySend.sh']):
 		#print("original msg: " + overheardMessage)
-		#line = time.strftime('%l:%M%p %Z on %b %d, %Y') + ":\t" + overheardMessage
-		#with open("fullLog.txt", "a") as logFile:	
-		#	logFile.write(line)
+		line = time.strftime('%l:%M%p %Z on %b %d, %Y') + ":\t" + overheardMessage
+		with open("fullLog.txt", "a") as logFile:	
+			logFile.write(line)
 		parseNotifySendMessage(overheardMessage)
 
 
@@ -43,9 +43,11 @@ method call time=1544635353.210271 sender=:1.17581 -> destination=:1.25 serial=6
 method call time=1544635353.222796 sender=:1.17581 -> destination=:1.25 serial=7 path=/org/freedesktop/Notifications; interface=org.freedesktop.Notifications; member=Notify
    string "notify-send"
    uint32 0
-   string ""
-   string "I think this works"
-   string ""
+   string "Title"
+   string "something"
+   string " Body
+	Body second line
+	Body third line"
    array [
    ]
    array [
@@ -90,9 +92,11 @@ def parseNotifySendMessage(notifySendTextLine):
 		return
 
 	else: # we assume the line starts with "string", and has quotes in it.
-		payload = line.split(" ", 1)[1] #ignore the starting "string"
+		payloads = line.split("\"")
+		if payloads[0] == "string ":
+			payloads = payloads[1:] #ignore the starting "string "
 		
-		for word in payload.split("\""):
+		for word in payloads:
 			if word != "":
 				message += word + "\n"
 	
@@ -102,6 +106,8 @@ def parseNotifySendMessage(notifySendTextLine):
 		
 
 def logNotification(msg):
+	msg = msg.replace("\n", ":\\n:")
+
 	line = time.strftime('%l:%M%p %Z on %b %d, %Y') + ", [message]" + msg + "[/message]\n"
 
 	print(line)
@@ -141,7 +147,6 @@ def showNotification(msg):
 
 		yOffset += margin
 
-
 	if yOffset + margin > pilImg.height or maxW + 2*margin > pilImg.width:
 		pilImg = Image.new("RGBA", (maxW + 2*margin, yOffset + margin), backgroundColor)
 		draw = ImageDraw.Draw(pilImg)
@@ -164,7 +169,7 @@ def showNotification(msg):
 	cv2.namedWindow(winName, cv2.WND_PROP_FULLSCREEN)
 	cv2.setWindowProperty(winName, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
-	activeWindowID = subprocess.check_output(["xdotool", "getactivewindow"])
+	activeWindowID = subprocess.check_output(["xdotool", "getactivewindow"]).replace("\n", "")
 	time.sleep(0.5)	 # wait a sec 
 	cv2.waitKey(200) # wait for window to load
 
@@ -174,7 +179,10 @@ def showNotification(msg):
 
 	# but keep the old window active, so if it pops up while you're typing, it doesn't steal your keypresses
 	# (esp. so it doesn't immediately close)
-	subprocess.check_output(["xdotool", "windowfocus", activeWindowID])
+	try:
+		subprocess.check_output(["xdotool", "windowfocus", activeWindowID])
+	except:
+		print("Could give focus back to original window; too many notiifcations at once. This could use a queue of some sort.")
 
 
 	cv2.waitKey(1000 * secondsShown)
