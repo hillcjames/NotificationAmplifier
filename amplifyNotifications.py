@@ -36,8 +36,7 @@ notificationNoticed = False
 message = ""
 
 '''
-notify-send sends messages that look like the below. Remember each line must be processed on its own. If it gets much more complicated
-I'll need something with CFG. pcregrep would be great, expect I can't get it to work with dbus output for some reason.
+notify-send sends messages that look like the below. Remember each line must be processed on its own. I would like to use pcregrep, except I can't get it to work with dbus output for some reason.
 
 method call time=1544635353.210271 sender=:1.17581 -> destination=:1.25 serial=6 path=/org/freedesktop/Notifications; interface=org.freedesktop.Notifications; member=GetServerInformation
 method call time=1544635353.222796 sender=:1.17581 -> destination=:1.25 serial=7 path=/org/freedesktop/Notifications; interface=org.freedesktop.Notifications; member=Notify
@@ -64,41 +63,38 @@ def parseNotifySendMessage(notifySendTextLine):
 	global message
 	line = notifySendTextLine.strip()
 	words = line.split()
-	#print(line, line.split()[0])
+
 	if len(words) == 0:
 		return
 
-	if (words[0] == 'method'):
+	if (words[0] == 'method'): # start of notification message section
 		notificationNoticed = True
 		message = ""
-		#print("start of notification\n")
 		return
 
-	if (not notificationNoticed):
-		#print("not checking for notifications\n")
+	if (not notificationNoticed): # ignore any lines outside of the notification section
 		return
 
-	if (words[0] == 'array'):
+	if (words[0] == 'array'): # end of notification message section
 		notificationNoticed = False
 		if message[-1:] == "\n":
 			message = message[:-1]
 		logNotification(message)
 		showNotification(message)
-		#print("end of notification\n")
 		return
 
-	if (words[0][:4] == "uint"):
-		#print("not the message\n")
+	if (words[0][:4] == "uint"): # ignore the declartion of the encoding - hopefully its some type of unit*
 		return
 
-	else: # we assume the line starts with "string", and has quotes in it.
-		payloads = line.split("\"")
-		if payloads[0] == "string ":
-			payloads = payloads[1:] #ignore the starting "string "
+	else: # the line is part of the message. It may or may not start with "string ", but if it does, remove that.
+		# it probably will contain some number of double-quotes; parse around those.
+		payload = line.split("\"")
+		if payload[0] == "string ":
+			payload = payload[1:] # remove the starting "string "
 		
-		for word in payloads:
-			if word != "":
-				message += word + "\n"
+		for section in payload:
+			if section != "":
+				message += section + "\n"
 	
 		return
 
